@@ -1,26 +1,30 @@
 // Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/theming/
-
-// Font path is used to include ionicons,
-// roboto, and noto sans fonts
+// http://ionicframework.com/docs/v2/theming/
 $font-path: "../assets/fonts";
-
-
-// The app direction is used to include
-// rtl styles in your app. For more info, please see:
-// http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
-
 
 @import "ionic.globals";
 
 
 // Shared Variables
 // --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+%cover{
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+
+%overflow{
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+}
+
+@mixin box-shadow($H, $V, $B, $S, $opacity) {
+  -webkit-box-shadow: $H $V $B $S rgba(0,0,0,$opacity) !important;
+  -moz-box-shadow: $H $V $B $S rgba(0,0,0,$opacity) !important;
+  -ms-box-shadow: $H $V $B $S rgba(0,0,0,$opacity) !important;
+  box-shadow: $H $V $B $S rgba(0,0,0,$opacity) !important;
+}
 
 
 
@@ -34,11 +38,21 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #0277bd,
+  secondary:  #f57c00,
+  star:       #faca43,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  grayColor:  #757575,
+  light:      #ffffff,
+  dark:       #222,
+  facebook: (
+    base: #3b5998,
+    contrast: #ffffff
+  ),
+  twitter: (
+    base: #26a6d1,
+    contrast: #ffffff
+  )
 );
 
 
@@ -52,9 +66,22 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$toolbar-md-title-font-size: 1.7rem;
+$toolbar-md-title-text-color: color($colors,light);
 
+$toggle-md-track-height: 13px;
+$toggle-md-handle-height: 18px;
+$toggle-md-handle-width: 18px;
+$toggle-md-track-background-color-on: darken(color($colors,primary),25%);
+$toggle-md-active-color: color($colors,secondary);
+$toggle-md-handle-background-color-off: #f1f1f1;
+$toggle-md-track-width: 31.5px;
+$toggle-md-track-background-color-off: #b9b8b8;
+$toggle-md-item-left-padding: 12px 0px 12px 16px;
 
+$item-md-avatar-size: 48px;
 
+$fab-size: 48px;
 
 // App Windows Variables
 // --------------------------------------------------
@@ -76,7 +103,7 @@ $colors: (
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/ionicons/
+// http://ionicframework.com/docs/v2/ionicons/
 
 @import "ionic.ionicons";
 
