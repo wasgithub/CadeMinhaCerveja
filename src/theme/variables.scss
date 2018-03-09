@@ -38,9 +38,9 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #0277bd,
-  secondary:  #f57c00,
-  star:       #faca43,
+  primary:    #d42027,
+  secondary:  #fccc2e,
+  star:       rgb(250, 202, 67),
   danger:     #f53d3d,
   grayColor:  #757575,
   light:      #ffffff,
@@ -55,6 +55,8 @@ $colors: (
   )
 );
 
+//heineken #0A7A06
+//bud #d42027
 
 // App iOS Variables
 // --------------------------------------------------

@@ -10,6 +10,16 @@
     }
 }
 
+.col-logo {
+  text-align: center;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .Loginpage{
     min-height: 100%;
     display: flex;
@@ -44,5 +54,11 @@
         color: color($colors , light);
         background-color: color($colors , secondary);
         font-weight: normal;
+    }
+
+    .button {
+      background-color: color($colors , light);
+      color: color($colors, dark);
+      font-weight: bold;
     }
 }

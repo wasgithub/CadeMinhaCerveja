@@ -1,7 +1,13 @@
 
 <ion-content class="form-content" padding>
+
   <div class="Loginpage">
       <div class="formContainer">
+          <ion-row>
+              <ion-col class="col-logo" >
+                <img class="logo" src="../../assets/img/logo.png" alt="">
+              </ion-col>
+            </ion-row>
 
         <form  class="app-form" text-center>
           <ion-list>
@@ -9,13 +15,14 @@
               <ion-label floating>Email</ion-label>
               <ion-input type="email"></ion-input>
             </ion-item>
-            <ion-item no-padding no-lines> 
-              <ion-label floating>Password</ion-label>
+            <ion-item no-padding no-lines>
+              <ion-label floating>Senha</ion-label>
               <ion-input type="password"></ion-input>
             </ion-item>
           </ion-list>
-          <button ion-button block strong text-uppercase color="grayColor" (click)="goTo('Home')">login</button>
-          <p class="bold" color="light" (click)="goTo('Register')">No account yet? Create one</p>
+          <button class="button" ion-button block strong text-uppercase  (click)="goTo('Home')" icon-left>
+            <ion-icon name="beer" color="secondary"></ion-icon> login</button>
+          <p class="bold" color="light" (click)="goTo('Register')">Ainda não tem conta? Crie uma.</p>
         </form>
 
       </div>
