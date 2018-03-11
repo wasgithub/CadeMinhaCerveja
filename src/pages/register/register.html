@@ -6,6 +6,11 @@
   <div class="Loginpage">
       <div class="formContainer">
         <form  class="app-form" text-center>
+          <ion-row>
+              <ion-col class="col-logo" >
+                <img class="logo" src="../../assets/img/logo.png" alt="">
+              </ion-col>
+          </ion-row>          
           <ion-list>
             <div class="user-name">
                  <ion-item no-padding no-lines>
@@ -27,7 +32,10 @@
               <ion-input type="password"></ion-input>
             </ion-item>
           </ion-list>
-          <button ion-button block strong text-uppercase color="grayColor" (click)="goTo('Home')">create account</button>
+          <button ion-button block strong text-uppercase color="grayColor" (click)="goTo('Home')" icon-left>
+            <ion-icon name="beer"></ion-icon>
+            Criar conta
+          </button>
         </form>
         <div class="loginFooter">
           <div class="option-sign" text-center>
