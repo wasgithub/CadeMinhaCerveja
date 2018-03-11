@@ -1,6 +1,6 @@
 {
   "name": "cadeMinhaCerveja",
-  "app_id": "",
+  "app_id": "4057b2f3",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
