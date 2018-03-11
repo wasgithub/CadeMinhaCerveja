@@ -87,6 +87,10 @@
     }
 }
 
+.status-color {
+    background: #00b28e;
+}
+
 .rate{
     margin: 10px 0;
     @include box-shadow(0,1px,5px,0,0.2);

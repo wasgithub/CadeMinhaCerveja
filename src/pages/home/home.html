@@ -4,7 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-capitalize>Find a Doctor</ion-title>
+    <ion-title text-capitalize>Cadê minha cerveja  </ion-title>
     <ion-buttons class="toggle-btn" end>
       <button ion-item icon-only no-padding no-lines>
         <ion-toggle  (ionChange)="toggleshowbtn()" [(ngModel)]="showbtn" checked="true"></ion-toggle>
@@ -21,28 +21,28 @@
   <div *ngIf="showbtn " #map id="map"></div>
   <div *ngIf="showbtn&&showslider" [ngClass]="{'activescroll': showbtn }" class="home-detail">
     <ion-scroll scrollX="true">
-      <ion-card class="app-card" *ngFor="let item of grid" padding  [ngClass]="{'activeslide': currentdoctor==item.id }">
+      <ion-card class="app-card" *ngFor="let item of grid" padding  [ngClass]="{'activeslide': currentBar==item.id }">
         <img (click)="goTo('Details')" src="{{item.img}}" />
         <div class="card-det">
-          <h4 (click)="goTo('Details')" no-margin>DR. John Smith</h4>
-          <p (click)="goTo('Details')" no-margin>Certified Dermatologist</p>
+          <h4 (click)="goTo('Details')" no-margin>Bar do Léo </h4>
+          <p (click)="goTo('Details')" no-margin>Bar e Restaurante</p>
           <div class="stars">
-            <ion-icon name="md-star"></ion-icon>
-            <ion-icon name="md-star"></ion-icon>
-            <ion-icon name="md-star"></ion-icon>
-            <ion-icon name="md-star"></ion-icon>
-            <ion-icon name="md-star-half"></ion-icon>
+            <ion-icon name="beer"></ion-icon>
+            <ion-icon name="beer"></ion-icon>
+            <ion-icon name="beer"></ion-icon>
+            <ion-icon name="beer"></ion-icon>
+            <ion-icon name="beer"></ion-icon>
             <p no-margin>4.6</p>
           </div>
           <ion-item (click)="goTo('Details')" no-padding no-lines>
             <ion-icon name="md-pin" mini item-start></ion-icon>
-            5 Avenue Anatole France, 75007 Paris, France
+            Av Braz Leme, 1020 - Santana - São Paulo
           </ion-item>
           <ion-grid no-padding>
             <ion-row>
               <ion-col col-6>
-                <button (click)="SaveDoctor(item)" *ngIf="!item.save" ion-button block>SAVE</button>
-                <button (click)="SaveDoctor(item)" *ngIf="item.save" ion-button block>SAVED</button>
+                <button (click)="SaveBar(item)" *ngIf="!item.save" ion-button block></button>
+                <button (click)="SaveBar(item)" *ngIf="item.save" ion-button block>Salvo</button>
               </ion-col>
               <ion-col col-3 (click)="like(item)">
                 <ion-icon name="md-star" color="light" [ngClass]="{'activeLikeColor': item.activeLike }"></ion-icon>
@@ -72,17 +72,21 @@
         </div>
       </ion-avatar>
       <div class="card-det">
-        <h4 (click)="goTo('Details')" no-margin>DR. John Smith</h4>
-        <p (click)="goTo('Details')" no-margin>Certified Dermatologist</p>
+        <h4 (click)="goTo('Details')" no-margin>Bar do Léo</h4>
+        <p (click)="goTo('Details')" no-margin>Bar e Restaurante</p>
         <ion-item no-padding no-lines>
           <ion-icon name="md-pin" mini text-left item-start></ion-icon>
-          5 Avenue Anatole France, 75007 Paris, France
+          Av Braz Leme, 1020 - Santana
         </ion-item>
         <ion-grid no-padding>
           <ion-row>
             <ion-col col-6>
-              <button (click)="SaveDoctor2(item)" *ngIf="!item.save2" ion-button block>SAVE</button>
-              <button (click)="SaveDoctor2(item)" *ngIf="item.save2" [ngClass]="{'saveColor':item.save2}" ion-button block>SAVED</button>
+              <button (click)="SaveBar2(item)" *ngIf="!item.save2" ion-button icon-only>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+              <button class="favorito" (click)="SaveBar2(item)" *ngIf="item.save2" [ngClass]="{'saveColor':item.save2}"  ion-button icon-only>
+                <ion-icon name="heart"></ion-icon>
+              </button>
             </ion-col>
             <ion-col (click)="like2(item)" col-3>
               <ion-icon name="md-star" color="grayColor" [ngClass]="{'activeLikeColor': item.activeLike2 }"></ion-icon>

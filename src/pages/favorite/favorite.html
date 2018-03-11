@@ -4,7 +4,7 @@
     <button ion-button menuToggle start>
       <ion-icon name="md-menu"></ion-icon>
     </button>
-    <ion-title text-capitalize>saved</ion-title>
+    <ion-title text-capitalize>Favoritos</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,24 +16,24 @@
       <ion-avatar (click)="goTo('Details')" item-start>
         <img src="assets/img/img1.png">
         <div class="stars">
-          <ion-icon name="md-star"></ion-icon>
-          <ion-icon name="md-star"></ion-icon>
-          <ion-icon name="md-star"></ion-icon>
-          <ion-icon name="md-star"></ion-icon>
-          <ion-icon name="md-star-half"></ion-icon>
+          <ion-icon name="beer"></ion-icon>
+          <ion-icon name="beer"></ion-icon>
+          <ion-icon name="beer"></ion-icon>
+          <ion-icon name="beer"></ion-icon>
+          <ion-icon name="beer"></ion-icon>
         </div>
       </ion-avatar>
       <div class="card-det">
-        <h4 (click)="goTo('Details')" no-margin>DR. John Smith</h4>
-        <p (click)="goTo('Details')" no-margin>Certified Dermatologist</p>
+        <h4 (click)="goTo('Details')" no-margin>Bar do Léo</h4>
+        <p (click)="goTo('Details')" no-margin>Bar e restaurante</p>
         <ion-item no-padding no-lines>
           <ion-icon name="md-pin" mini text-left item-start></ion-icon>
-          5 Avenue Anatole France, 75007 Paris, France
+          Av Braz Leme, 1020 - Santana - São Paulo
         </ion-item>
         <ion-grid no-padding>
           <ion-row>
             <ion-col col-6>
-              <button (click)="removeItem(item)" ion-button block>Delete</button>
+              <button  class="delete" (click)="removeItem(item)" ion-button block>Delete</button>
             </ion-col>
             <ion-col (click)="like(item)" col-3>
               <ion-icon name="md-star" color="grayColor" [ngClass]="{'activeLikeColor': item.activeLike }"></ion-icon>

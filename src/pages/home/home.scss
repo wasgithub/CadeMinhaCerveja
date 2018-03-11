@@ -4,6 +4,9 @@ page-home{
     }
 }
 
+.favorito {
+    color: color($colors, danger);
+}
 .toggle-btn{
     .item-md{
         background-color: transparent;

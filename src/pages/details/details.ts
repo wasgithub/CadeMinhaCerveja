@@ -14,7 +14,7 @@ export class Details {
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
-  saveDoctor(){
+  saveBar(){
     this.save = !this.save;
   }
 

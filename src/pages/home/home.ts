@@ -17,16 +17,22 @@ export class Home {
   list: Array<any>;
   showbtn: boolean=true;
   markerBounds
-  currentdoctor
+  currentBar
   showslider
   directionsDisplay = new google.maps.DirectionsRenderer;
-  markers=[{id:1,lat:40.712007,lng:-74.008573},{id:2,lat:40.709404,lng:-74.000055}]
-  constructor(public platform: Platform,public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public geolocation: Geolocation,public ngZOne:NgZone, public modalCtrl: ModalController) {
-    this. grid = [{id:1,img:'assets/img/img1.png'},{id:2,img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'},
-    {img:'assets/img/img1.png'},{img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'}];
+  markers=[{id:1,lat:-23.540525,lng:-46.866305},{id:2,lat:-23.540443,lng:-46.866225}]
+  constructor(public platform: Platform,
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public viewCtrl: ViewController,
+    public geolocation: Geolocation,
+    public ngZOne:NgZone, 
+    public modalCtrl: ModalController) {
+      this. grid = [{id:1,img:'assets/img/img1.png'},{id:2,img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'},
+      {img:'assets/img/img1.png'},{img:'assets/img/img2.png'},{img:'assets/img/img1.png'},{img:'assets/img/img2.png'}];
 
-    this.list = [{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'}];
-  }
+       this.list = [{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'},{img: 'assets/img/img1.png'},{img: 'assets/img/img2.png'}];
+    }
 
   ionViewDidLoad(){
     this.toggleshowbtn()
@@ -41,7 +47,7 @@ export class Home {
       this.markerBounds = new google.maps.LatLngBounds();
       this.map = new google.maps.Map(this.mapElement.nativeElement, {
         zoom: 7,
-        center: {lat:40.712775,lng:-74.005973}
+        center: {lat:-23.540176,lng:-46.864415}
       });
       this.directionsDisplay.setMap(this.map);
       this.addMarker()// current
@@ -91,7 +97,7 @@ export class Home {
         
          this.ngZOne.run(()=>{
          if(!this.showslider)this.showslider=true
-         this.currentdoctor=marker.title
+         this.currentBar=marker.title
         });         
       })
     }
@@ -106,11 +112,11 @@ export class Home {
   }
 
 // Saved function
-  SaveDoctor(item){
+  SaveBar(item){
     item.save = !item.save;
   }
 
-  SaveDoctor2(item){
+  SaveBar2(item){
     item.save2 = !item.save2;
   }
 
