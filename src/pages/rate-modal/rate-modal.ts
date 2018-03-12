@@ -9,9 +9,11 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class RateModalPage {
 
+  classification: any;
   rate= 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  this.classification = this.navParams.get('classification');
   }
 
   dismiss() {

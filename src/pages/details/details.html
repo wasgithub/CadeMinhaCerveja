@@ -16,8 +16,8 @@
     <img src="assets/img/det-img.png" />
     <div class="more-info">
       <ion-fab left>
-        <button (click)="saveBar()" class="add-btn" ion-fab>
-          <ion-icon name="add" *ngIf="!save"></ion-icon>
+        <button (click)="presentRateModal('price')" class="add-btn" ion-fab>
+          <ion-icon name="logo-usd" *ngIf="!save"></ion-icon>
           <ion-icon name="md-checkmark" *ngIf="save"></ion-icon>
         </button>
       </ion-fab>
